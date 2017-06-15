@@ -16,15 +16,14 @@ class BookingsController extends Controller
     public function show(Request $request)
     {
         $agent = $request->get('agent');
-        $bookings = Booking::get_latest_for_user(10, $agent)->paginate(2);
+        $bookings = Booking::for_agent_until_days_ago($agent, 10)->paginate(3);
 
         if ($bookings->count() === 0) {
-           return redirect('/')
-                    ->withErrors('The username you have provided is invalid!');
+            return redirect('/')
+                ->withErrors('The username you have provided is invalid!');
         }
 
 
         return view('bookings', ['bookings' => $bookings]);
     }
 }
-

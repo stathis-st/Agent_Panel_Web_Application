@@ -1,0 +1,23 @@
+body{
+    background-color: #ccd9ff;
+}
+.form-control{
+    margin-top: 20px;
+}
+.btn{
+    margin-top: 18px;
+}
+.alert, alert-danger{
+    margin-top: 10px;
+}
+
+.table{
+    background-color: white;
+    margin-top: 36px;
+}
+.well{
+    margin-top: 240px;
+}
+.table-responsive{
+    margin-top: 220px;
+}

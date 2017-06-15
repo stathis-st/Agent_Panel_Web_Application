@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    static function get_latest_for_user($days, $agent) {
-        
+    public $timestamps = false;
+
+    static function for_agent_until_days_ago($agent, $days) {
+        $tenDaysBefore = (new \DateTime)->modify('-' . $days . ' day')->format('Y-m-d');
+        return Booking::where('d_ate', '>=', $tenDaysBefore)->where('agent_name', $agent);
     }
 }
