@@ -18,7 +18,7 @@ class CreateBookingsTable extends Migration
             $table->string('booking_id');
             $table->string('travelers_full_name');
             $table->string('museum_booked');
-            $table->date('d_ate');
+            $table->date('date');
         });
     }
 

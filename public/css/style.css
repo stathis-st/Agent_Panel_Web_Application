@@ -7,10 +7,6 @@ body{
 .btn{
     margin-top: 18px;
 }
-.alert, alert-danger{
-    margin-top: 10px;
-}
-
 .table{
     background-color: white;
     margin-top: 36px;
@@ -20,4 +16,10 @@ body{
 }
 .table-responsive{
     margin-top: 220px;
+}
+.no_record{
+    margin-top: 290px;
+}
+.invalid{
+    margin-top: 18px;
 }
